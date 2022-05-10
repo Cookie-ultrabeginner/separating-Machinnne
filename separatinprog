@@ -1,0 +1,12 @@
+string = (input("Enter your digits or words, the programm will separate and sort them: "))
+nums=[]
+for i in string:
+    check_for_digits = i.isdigit()
+    if check_for_digits==True:
+        nums.append(i)
+        string = string.replace(i, "")
+print ("the number is ", end='')
+for num in (sorted(nums)):
+    print (num, end='')
+print ("\n")
+print ("the sentence or symbols are: " + string)
